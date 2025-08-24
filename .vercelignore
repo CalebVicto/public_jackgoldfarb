@@ -1,0 +1,6 @@
+# Ignorar archivos grandes o privados durante el despliegue
+uploads/
+libs/PHPMailer/
+*.psd
+*.ai
+*.zip

@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Colegio Jack Goldfarb</title>
+
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon" />
+
+  <!-- BoxIcons -->
+
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/general.css" />
+
+  <link rel="stylesheet" href="assets/css/home.css" />
+
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWV2DPJY41"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+
+    gtag("config", "G-PWV2DPJY41");
+  </script>
+
+  <!-- NAV -->
+
+  <nav id="nav">
+    <a class="logo" href="./">
+      <img src="./assets/img/logos_oficial.png" alt="" />
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="./">inicio</a></li>
+      <li>
+        <a id="nosotros">nosotros <i class="bx bxs-down-arrow"></i></a>
+        <ul class="submenu" id="sub_nosotros">
+          <li>
+            <a class="menu__link submenu-btn" href="./quienes-somos.html">¿Quiénes Somos?
+            </a>
+            <ul class="submenu2">
+              <li>
+                <a href="./nuestra-historia.html" class="menu__link">Nuestra historia</a>
+              </li>
+              <li>
+                <a href="./nuestros-lideres.html" class="menu__link">Nuestros líderes</a>
+              </li>
+              <li>
+                <a href="./nuestros-patrocinadores.html" class="menu__link">Nuestros patrocinadores</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./mision-vision.html">Misión y Visión</a></li>
+          <li class="container-submenu">
+            <a href="./himno.html">Himno de Nuestro Colegio</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./valores_institucionales.html">Valores institucionales</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./colaboradores.html">Colaboradores</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./familias_fvc.html">Familias FVC </a>
+          </li>
+          <li>
+            <a href="./premios-distinciones.html">Premios y Distinciones</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a id="admision">admisión <i class="bx bxs-down-arrow"></i></a>
+
+        <ul class="submenu" id="sub_admision">
+          <li><a href="./porque-elegirnos.html">¿Por qué elegirnos?</a></li>
+
+          <li><a href="./niveles-educativos.html">Niveles</a></li>
+
+          <li>
+            <a href="./proceso-de-admision.html">Proceso de admisión</a>
+          </li>
+
+          <li><a href="./solicitar-info.html">Solicitar Información</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./contacto.html">contacto <i class="bx bxs-down-arrow"></i></a>
+
+        <ul class="submenu" id="sub_admision">
+          <li>
+            <a href="./forma_parte_equipo.html">Forma parte de nuestro equipo</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://jackgoldfarb.cubicol.pe/">cubicol</a>
+      </li>
+
+      <li><img src="./assets/img/logo_school_home.png" alt="" /></li>
+    </ul>
+
+    <i id="menu-open" class="bx bx-menu"></i>
+  </nav>
+
+  <!-- FIN NAV -->
+
+  <!-- Carousel Header -->
+
+  <div class="splide carousel-header" style="margin-top: -20px">
+    <div class="splide__track">
+      <ul class="splide__list">
+        <li class="splide__slide">
+          <img src="./assets/img/carousel/carousel-1-2025.jpg" alt="" />
+          <div class="float_buttons">
+            <button class="btn_1" onclick="redirect()">
+              INFORMES Y MATRÍCULAS
+            </button>
+            <!--<button class="btn_2" onclick="openPdfAdmision()">
+                ADMISIÓN 2022<br />
+                MAYOR INFORMACIÓN
+              </button>-->
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <img src="./assets/img/carousel/carousel-2.JPG" alt="" />
+          <div class="float_buttons">
+            <button class="btn_1" onclick="redirect()">
+              INFORMES Y MATRÍCULAS
+            </button>
+            <!--<button class="btn_2" onclick="openPdfAdmision()">
+                ADMISIÓN 2022<br />
+                MAYOR INFORMACIÓN
+              </button>-->
+          </div>
+          <div class="float_text float_text_left">
+            <p>Worship to God</p>
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <img src="./assets/img/carousel/carousel-3.jpg" alt="" />
+          <div class="float_buttons">
+            <button class="btn_1" onclick="redirect()">
+              INFORMES Y MATRÍCULAS
+            </button>
+            <!--<button class="btn_2" onclick="openPdfAdmision()">
+                ADMISIÓN 2022<br />
+                MAYOR INFORMACIÓN
+              </button>-->
+          </div>
+          <div class="float_text float_text_center">
+            <p>Learning experiences</p>
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <img src="./assets/img/carousel/carousel-4.jpg" alt="" />
+          <div class="float_buttons">
+            <button class="btn_1" onclick="redirect()">
+              INFORMES Y MATRÍCULAS
+            </button>
+            <!--<button class="btn_2" onclick="openPdfAdmision()">
+                ADMISIÓN 2022<br />
+                MAYOR INFORMACIÓN
+              </button>-->
+          </div>
+          <div class="float_text float_text_left">
+            <p>Research and learning</p>
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <img src="./assets/img/carousel/carousel-5.jpg" alt="" />
+          <div class="float_buttons">
+            <button class="btn_1" onclick="redirect()">
+              INFORMES Y MATRÍCULAS
+            </button>
+            <!--<button class="btn_2" onclick="openPdfAdmision()">
+                ADMISIÓN 2022<br />
+                MAYOR INFORMACIÓN
+              </button>-->
+          </div>
+          <div class="float_text float_text_left">
+            <p>Music Workshop</p>
+          </div>
+        </li>
+
+        <li class="splide__slide">
+          <img src="./assets/img/carousel/carousel-6.png" alt="" />
+          <div class="float_buttons">
+            <button class="btn_1" onclick="redirect()">
+              INFORMES Y MATRÍCULAS
+            </button>
+            <!--<button class="btn_2" onclick="openPdfAdmision()">
+                ADMISIÓN 2022<br />
+                MAYOR INFORMACIÓN
+              </button>-->
+          </div>
+          <div class="float_text float_text_center">
+            <p>Families of values and colors</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Bienvenida -->
+
+  <section class="bienvenido">
+    <div class="max-width">
+      <div>
+        <h1 class="title-1">bienvenidos al colegio jack goldfarb</h1>
+
+        <p>
+          Formamos integralmente a los estudiantes en los aspectos físico,
+          afectivo, cognitivo y espiritual basado en los valores de Amor
+          (Autoaceptación, Perdón, Aceptación, Solidaridad) y Disciplina
+          (Obediencia, Responsabilidad, Puntualidad, Orden).
+        </p>
+      </div>
+
+      <iframe class="yt-video" src="https://www.youtube.com/embed/Pzf41qA4VzI" title="YouTube video player"
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- Niveles -->
+
+  <section class="niveles">
+    <div class="max-width">
+      <a href="./niveles-educativos.html" class="nivel inicial">
+        <h1>inicial</h1>
+
+        <div>
+          <img src="./assets/img/niveles/inicial.jpg" alt="" />
+
+          <h3>3 a 5 años</h3>
+        </div>
+      </a>
+
+      <a href="./niveles-educativos.html#primaria" class="nivel primaria">
+        <h1>primaria</h1>
+
+        <div>
+          <img src="./assets/img/niveles/primaria.jpg" alt="" />
+
+          <h3>1° a 6° primaria</h3>
+        </div>
+      </a>
+
+      <a href="./niveles-educativos.html#secundaria" class="nivel secundaria">
+        <h1>secundaria</h1>
+
+        <div>
+          <img src="./assets/img/niveles/secundaria.jpg" alt="" />
+
+          <h3>1° a 5° secundaria</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Carousel Eventos -->
+  <!--
+      <div class="eventos">
+      <div class="max-width">
+        <h1 class="title-2">eventos próximos</h1>
+
+        <div class="splide carousel-eventos">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide">
+                <a href="#" class="evento_card">
+                  <img
+                    src="./assets/img/eventos/noviembre/evento_1.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="splide__slide">
+                <a href="#" class="evento_card">
+                  <img
+                    src="./assets/img/eventos/noviembre/evento_2.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="splide__slide">
+                <a href="#" class="evento_card">
+                  <img
+                    src="./assets/img/eventos/noviembre/evento_3.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="splide__slide">
+                <a href="#" class="evento_card">
+                  <img
+                    src="./assets/img/eventos/noviembre/evento_4.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+              <li class="splide__slide">
+                <a href="#" class="evento_card">
+                  <img
+                    src="./assets/img/eventos/noviembre/evento_5.png"
+                    alt=""
+                  />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex mt-20">
+          <button onclick="toEvents()" class="main_btn">
+            VER TODOS LOS EVENTOS
+          </button>
+        </div>
+      </div>
+    </div>
+     -->
+
+
+  <!-- Noticias -->
+
+  <div class="noticias">
+    <div class="max-width">
+      <h1 class="title-1">noticias</h1>
+
+      <div class="list_noticias">
+        <div class="card_noticia">
+          <h3 class="title_noticia">FERIA METROPOLITANA DE LIBRO</h3>
+
+          <p class="content_noticia">
+            Nuestro colegio Jack Goldfarb ha sido invitado a participar de la
+            6ta Feria Metropolitana del Libro, esta actividad beneficiará al
+            colegio con la implementación de nuestra biblioteca.
+          </p>
+        </div>
+
+        <div class="card_noticia">
+          <h3 class="title_noticia">DISTINCIÓN DE LA PUCP</h3>
+
+          <p class="content_noticia">
+            El colegio Jack Goldfarb recibió diploma de la PUCP debido a su
+            desempeño y excelencia académica.
+          </p>
+        </div>
+
+        <div class="card_noticia">
+          <h3 class="title_noticia">DIARIO EL COMERCIO</h3>
+
+          <p class="content_noticia">
+            Nuestra estudiante YALI ARAGON de 5° año de secundaria quedó como
+            una de las finalistas en el concurso de Dibujo ¿cómo imaginas al
+            Perú del Bicentenario? organizado por el Diario el Comercio.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Alianzas estrategicas -->
+
+  <div class="alianzas">
+    <div class="max-width">
+      <h1 class="title-2">alianzas estratégicas</h1>
+
+      <div class="logos">
+        <img src="./assets/img/logos/Acsi.png" alt="Asociación Internacional de Colegios Cristianos" />
+
+        <img src="./assets/img/logos/catolica.png" alt="Pontificia Universidad Católica del Perú" />
+
+        <img src="./assets/img/logos/Consorcio de colegios.png"
+          alt="Colegios de la Iglesia Alianza Cristiana y Misionera" />
+
+        <img src="./assets/img/logos/Cubicol.png" alt="CUBICOL" />
+
+        <img src="./assets/img/logos/Desarrollo Cristiano.png" alt="Desarrollo Cristiano del Perú" />
+
+        <img src="./assets/img/logos/Hickory Hammock.png" alt="Iglesia Bautista Hickory Hammock" />
+
+        <img src="./assets/img/logos/mente_brillante.png" alt="Mente Brillante" />
+
+        <img src="./assets/img/logos/santillana.png" alt="Santillana" />
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+
+  <footer>
+    <ul>
+      <ul>
+        <li>
+          <span>admisión</span>
+
+          <ul>
+            <li><a href="./porque-elegirnos.html">¿Por qué elegirnos?</a></li>
+
+            <li><a href="./niveles-educativos.html">Niveles</a></li>
+
+            <li>
+              <a href="./proceso-de-admision.html">Proceso de admisión</a>
+            </li>
+
+            <li><a href="./solicitar-info.html">Solicitar información</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <span>nosotros</span>
+
+          <ul>
+            <li><a href="./quienes-somos.html">¿Quienes Somos?</a></li>
+            <li><a href="./nuestra-historia.html">Nuestra Historia</a></li>
+            <li><a href="./nuestros-lideres.html">Nuestros Líderes</a></li>
+            <li>
+              <a href="./nuestros-patrocinadores.html">Nuestros Patrocinadores</a>
+            </li>
+            <li><a href="./mision-vision.html">Misión y Visión</a></li>
+            <li><a href="./himno.html">Himno de Nuestro Colegio</a></li>
+            <li>
+              <a href="./valores_institucionales.html">Valores Institucionales</a>
+            </li>
+            <li><a href="./colaboradores.html">Colaboradores</a></li>
+            <li><a href="./familias_fvc.html">Familias FVC</a></li>
+            <li>
+              <a href="./premios-distinciones.html">Premios y distinciones</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <span>contactos</span>
+
+          <ul>
+            <li><a href="./contacto.html">Número de contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <ul>
+        <li>
+          <span><a target="_blank" href="https://jackgoldfarb.cubicol.pe/">CUBICOL</a></span>
+        </li>
+      </ul>
+
+      <ul>
+        <a href="https://forms.gle/W5r4F8yL1sT7asrs7">
+          <img style="width: 150px; margin-top: 20px; cursor: pointer" src="./assets/img/btn_libro_reclamaciones.jpg"
+            alt="" /></a>
+      </ul>
+    </ul>
+
+    <div class="autor">&copy; Copyright 2021 Colegio Jack Goldfarb</div>
+  </footer>
+
+  <!-- Redes -->
+
+  <div class="redes">
+    <a target="_blank" href="https://www.facebook.com/jackgoldfarbschool" class="facebook">f</a>
+
+    <a target="_blank" href="https://wa.link/pk5zid" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+
+    <a target="_blank" href="https://www.instagram.com/colegiojackgoldfarb" class="instagram"><span></span></a>
+
+    <a target="_blank" href="https://www.youtube.com/channel/UC9afS2Bijsk_UDESBMfmxuA" class="youtube"></a>
+  </div>
+
+  <!-- Carousel JS -->
+
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/js/splide.min.js"></script>
+
+  <!-- Carousel CSS -->
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css" />
+
+  <script>
+    // Carousel Header
+    new Splide(".carousel-header", {
+      type: "loop",
+      interval: 5000,
+      autoplay: true,
+      pauseOnHover: false,
+    }).mount();
+
+    /*new Splide(".carousel-eventos", {
+      type: "loop",
+      interval: 5000,
+      autoplay: true,
+      autoWidth: true,
+    }).mount();*/
+
+    // NAV
+
+    var m_query = window.matchMedia("(max-width: 1024px)");
+
+    if (m_query.matches) {
+      document.getElementById("admision").onclick = () => {
+        document
+          .getElementById("sub_admision")
+          .classList.toggle("sub_active");
+      };
+
+      document.getElementById("nosotros").onclick = () => {
+        document
+          .getElementById("sub_nosotros")
+          .classList.toggle("sub_active");
+      };
+
+      document.getElementById("menu-open").onclick = () => {
+        document.querySelector(".nav-menu").classList.toggle("nav-active");
+      };
+    }
+
+    function redirect() {
+      window.location.replace("/solicitar-info.html");
+    }
+
+    function toEvents() {
+      window.location.replace("/eventos.html");
+    }
+
+    function openPdfAdmision() {
+      window.open("admision.pdf", "_blank");
+    }
+
+    window.onscroll = function () {
+      var top = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 100) {
+        document.getElementById("nav").style.background = "#830119";
+      } else {
+        document.getElementById("nav").style.background = "transparent";
+        document.getElementById("nav").style.backgroundImage =
+          "linear-gradient(to top,transparent,var(--main-color--) 65px)";
+      }
+    };
+  </script>
+</body>
+
+</html>

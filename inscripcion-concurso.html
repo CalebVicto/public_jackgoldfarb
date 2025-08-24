@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Colegio Jack Goldfarb</title>
+
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon" />
+
+  <!-- BoxIcons -->
+
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/general.css" />
+  <link rel="stylesheet" href="assets/css/home.css" />
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+</head>
+
+<body>
+  <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-PWV2DPJY41"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+
+    gtag("config", "G-PWV2DPJY41");
+  </script>
+  <nav id="nav" style="
+        background-image: linear-gradient(
+          to top,
+          transparent,
+          var(--main-color--) 65px
+        );
+        background-position: initial;
+        background-size: initial;
+        background-repeat: initial;
+        background-attachment: initial;
+        background-origin: initial;
+        background-clip: initial;
+        background-color: transparent;
+      ">
+    <a class="logo" href="./">
+      <img src="./assets/img/logos_oficial.png" alt="" />
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="./">inicio</a></li>
+      <li>
+        <a id="nosotros">nosotros <i class="bx bxs-down-arrow"></i></a>
+        <ul class="submenu" id="sub_nosotros">
+          <li>
+            <a class="menu__link submenu-btn" href="./quienes-somos.html">¿Quiénes Somos?
+            </a>
+            <ul class="submenu2">
+              <li>
+                <a href="./nuestra-historia.html" class="menu__link">Nuestra historia</a>
+              </li>
+              <li>
+                <a href="./nuestros-lideres.html" class="menu__link">Nuestros líderes</a>
+              </li>
+              <li>
+                <a href="./nuestros-patrocinadores.html" class="menu__link">Nuestros patrocinadores</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./mision-vision.html">Misión y Visión</a></li>
+          <li class="container-submenu">
+            <a href="./himno.html">Himno de Nuestro Colegio</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./valores_institucionales.html">Valores institucionales</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./colaboradores.html">Colaboradores</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./familias_fvc.html">Familias FVC </a>
+          </li>
+          <li>
+            <a href="./premios-distinciones.html">Premios y Distinciones</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a id="admision">admisión <i class="bx bxs-down-arrow"></i></a>
+
+        <ul class="submenu" id="sub_admision">
+          <li><a href="./porque-elegirnos.html">¿Por qué elegirnos?</a></li>
+
+          <li><a href="./niveles-educativos.html">Niveles</a></li>
+
+          <li>
+            <a href="./proceso-de-admision.html">Proceso de admisión</a>
+          </li>
+
+          <li><a href="./solicitar-info.html">Solicitar Información</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./contacto.html">contacto <i class="bx bxs-down-arrow"></i></a>
+
+        <ul class="submenu" id="sub_admision">
+          <li>
+            <a href="./forma_parte_equipo.html">Forma parte de nuestro equipo</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://jackgoldfarb.cubicol.pe/">cubicol</a>
+      </li>
+
+      <li><img src="./assets/img/logo_school_home.png" alt="" /></li>
+    </ul>
+
+    <i id="menu-open" class="bx bx-menu"></i>
+  </nav>
+  <div style="margin-top: 100px; height: 100%" class="d-flex">
+    <div style="padding: 20px" class="d-flex justify-content-center">
+      <img class="mt-20 w-100" src="assets/img/eventos/concurso_rubik_2024.png" alt="concurso_rubik_2024" />
+    </div>
+    <div class="d-flex justify-content-center">
+      <div style="width: 1000px; padding: 20px">
+        <div>
+          <h2 style="color: #830119" class="text-center">
+            FICHA DE INSCRIPCIÓN
+          </h2>
+          <div class="d-flex">
+            <p class="bold bordered texto-cabecera">COLEGIO:</p>
+            <input id="colegio" name="colegio" class="bordered w-100" type="text" />
+          </div>
+          <div class="d-flex">
+            <p class="bold bordered texto-cabecera">Dirección:</p>
+            <input id="direccion" name="direccion" class="bordered w-100" type="text" />
+          </div>
+          <div class="d-flex">
+            <p class="bold bordered texto-cabecera">Distrito:</p>
+            <input id="distrito" name="distrito" class="bordered w-100" type="text" />
+          </div>
+          <div class="d-flex">
+            <p class="bold bordered texto-cabecera">Teléfonos:</p>
+            <input id="telefonos" name="telefonos" class="bordered w-100" type="text" />
+          </div>
+          <div class="d-flex">
+            <p class="bold bordered texto-cabecera">Director(a):</p>
+            <input id="director" name="director" class="bordered w-100" type="text" />
+          </div>
+          <div class="d-flex">
+            <p class="bold bordered texto-cabecera">Asesor(a):</p>
+            <input id="asesor" name="asesor" class="bordered w-100" type="text" />
+          </div>
+        </div>
+
+        <div class="mt-20">
+          <h2 style="background-color: #830119; color: white" class="bordered text-center">
+            NIVEL PRIMARIA
+          </h2>
+          <div class="d-flex">
+            <p class="bordered texto-cabecera bold">Nº</p>
+            <p class="bordered w-100 text-center bold">
+              NOMBRES Y APELLIDOS DE LOS ESTUDIANTES
+            </p>
+            <p class="bordered w-100 text-center bold">GRADO</p>
+          </div>
+          <div id="alumnos-primaria">
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">1</p>
+              <input id="primaria-nombre-1" class="bordered w-100" type="text" />
+              <input id="primaria-grado-1" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">2</p>
+              <input id="primaria-nombre-2" class="bordered w-100" type="text" />
+              <input id="primaria-grado-2" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">3</p>
+              <input id="primaria-nombre-3" class="bordered w-100" type="text" />
+              <input id="primaria-grado-3" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">4</p>
+              <input id="primaria-nombre-4" class="bordered w-100" type="text" />
+              <input id="primaria-grado-4" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">5</p>
+              <input id="primaria-nombre-5" class="bordered w-100" type="text" />
+              <input id="primaria-grado-5" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">6</p>
+              <input id="primaria-nombre-6" class="bordered w-100" type="text" />
+              <input id="primaria-grado-6" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">7</p>
+              <input id="primaria-nombre-7" class="bordered w-100" type="text" />
+              <input id="primaria-grado-7" class="bordered w-100" type="text" />
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2 style="background-color: #830119; color: white" class="bordered text-center">
+            NIVEL SECUNDARIA
+          </h2>
+          <div class="d-flex">
+            <p class="bordered texto-cabecera bold">Nº</p>
+            <p class="bordered w-100 text-center bold">
+              NOMBRES Y APELLIDOS DE LOS ESTUDIANTES
+            </p>
+            <p class="bordered w-100 text-center bold">AÑO</p>
+          </div>
+          <div id="alumnos-secundaria">
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">1</p>
+              <input id="secundaria-nombre-1" class="bordered w-100" type="text" />
+              <input id="secundaria-grado-1" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">2</p>
+              <input id="secundaria-nombre-2" class="bordered w-100" type="text" />
+              <input id="secundaria-grado-2" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">3</p>
+              <input id="secundaria-nombre-3" class="bordered w-100" type="text" />
+              <input id="secundaria-grado-3" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">4</p>
+              <input id="secundaria-nombre-4" class="bordered w-100" type="text" />
+              <input id="secundaria-grado-4" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">5</p>
+              <input id="secundaria-nombre-5" class="bordered w-100" type="text" />
+              <input id="secundaria-grado-5" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">6</p>
+              <input id="secundaria-nombre-6" class="bordered w-100" type="text" />
+              <input id="secundaria-grado-6" class="bordered w-100" type="text" />
+            </div>
+            <div class="d-flex">
+              <p class="bordered texto-cabecera">7</p>
+              <input id="secundaria-nombre-7" class="bordered w-100" type="text" />
+              <input id="secundaria-grado-7" class="bordered w-100" type="text" />
+            </div>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center mt-20">
+          <button id="register" class="w-100" style="
+                background-color: #830119;
+                color: white;
+                font-size: 20px;
+                border-radius: 10px;
+                border: none;
+                padding: 10px;
+                width: 150px;
+                cursor: pointer;
+              ">
+            Registrar
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="message"></div>
+  <script>
+    // NAV
+
+    var m_query = window.matchMedia("(max-width: 1024px)");
+
+    if (m_query.matches) {
+      document.getElementById("admision").onclick = () => {
+        document
+          .getElementById("sub_admision")
+          .classList.toggle("sub_active");
+      };
+
+      document.getElementById("nosotros").onclick = () => {
+        document
+          .getElementById("sub_nosotros")
+          .classList.toggle("sub_active");
+      };
+
+      document.getElementById("menu-open").onclick = () => {
+        document.querySelector(".nav-menu").classList.toggle("nav-active");
+      };
+    }
+
+    function redirect() {
+      window.location.replace("/solicitar-info.html");
+    }
+
+    function toEvents() {
+      window.location.replace("/eventos.html");
+    }
+
+    function openPdfAdmision() {
+      window.open("admision.pdf", "_blank");
+    }
+
+    window.onscroll = function () {
+      var top = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 100) {
+        document.getElementById("nav").style.background = "#830119";
+      } else {
+        document.getElementById("nav").style.background = "transparent";
+        document.getElementById("nav").style.backgroundImage =
+          "linear-gradient(to top,transparent,var(--main-color--) 65px)";
+      }
+    };
+
+    const obtenerPostulantesPorGrado = function (grado) {
+      let content = ``;
+      const alumnos = document.querySelector(`#alumnos-${grado}`);
+      for (let index = 0; index < 7; index++) {
+        content += `<div class="d-flex">
+            <p class="bordered texto-cabecera">${index + 1}</p>
+            <input id = '${grado}-nombre-${index + 1
+          }' class="bordered w-100" type="text" />
+            <input id = '${grado}-grado-${index + 1
+          }' class="bordered w-100" type="text" />
+          </div>`;
+      }
+
+      alumnos.innerHTML = content;
+    };
+
+    obtenerPostulantesPorGrado("primaria");
+    obtenerPostulantesPorGrado("secundaria");
+
+    document.getElementById("register").onclick = async (e) => {
+      e.preventDefault();
+      const formData = new FormData();
+      const colegio = document.querySelector("#colegio");
+      const direccion = document.querySelector("#direccion");
+      const distrito = document.querySelector("#distrito");
+      const telefonos = document.querySelector("#telefonos");
+      const director = document.querySelector("#director");
+      const asesor = document.querySelector("#asesor");
+
+      const colegioValue = colegio.value;
+      const direccionValue = direccion.value;
+      const distritoValue = distrito.value;
+      const telefonosValue = telefonos.value;
+      const directorValue = director.value;
+      const asesorValue = asesor.value;
+
+      formData.append("colegio", colegioValue);
+      formData.append("direccion", direccionValue);
+      formData.append("distrito", distritoValue);
+      formData.append("telefonos", telefonosValue);
+      formData.append("director", directorValue);
+      formData.append("asesor", asesorValue);
+
+      for (let index = 0; index < 7; index++) {
+        const alumnoPrimaria = document.querySelector(
+          `#primaria-nombre-${index + 1}`
+        );
+        const gradoPrimaria = document.querySelector(
+          `#primaria-grado-${index + 1}`
+        );
+        const alumnoPrimariaValue = alumnoPrimaria.value;
+        const gradoPrimariaValue = gradoPrimaria.value;
+
+        formData.append(`primaria-nombre-${index + 1}`, alumnoPrimariaValue);
+        formData.append(`primaria-grado-${index + 1}`, gradoPrimariaValue);
+
+        const alumnoSecundaria = document.querySelector(
+          `#secundaria-nombre-${index + 1}`
+        );
+        const gradoSecundaria = document.querySelector(
+          `#secundaria-grado-${index + 1}`
+        );
+        const alumnoSecundariaValue = alumnoSecundaria.value;
+        const gradoSecundariaValue = gradoSecundaria.value;
+
+        formData.append(
+          `secundaria-nombre-${index + 1}`,
+          alumnoSecundariaValue
+        );
+        formData.append(
+          `secundaria-grado-${index + 1}`,
+          gradoSecundariaValue
+        );
+      }
+      const data = await fetch("./inscripcion-concurso.php", {
+        method: "POST",
+        body: formData,
+      }).then((res) => res.json());
+
+      limpiarValores("colegio");
+      limpiarValores("direccion");
+      limpiarValores("distrito");
+      limpiarValores("telefonos");
+      limpiarValores("director");
+      limpiarValores("asesor");
+
+      for (let index = 0; index < 7; index++) {
+        const indice = index + 1;
+        limpiarValores("primaria-nombre-" + indice);
+        limpiarValores("primaria-grado-" + indice);
+        limpiarValores("secundaria-nombre-" + indice);
+        limpiarValores("secundaria-grado-" + indice);
+      }
+      document.querySelector(".message").innerHTML = data.res;
+
+      document.querySelector(".message").style.display = "block";
+
+      setTimeout(() => {
+        document.querySelector(".message").style.display = "none";
+      }, [3000]);
+    };
+
+    const limpiarValores = (id) => {
+      const element = document.querySelector("#" + id);
+      element.value = null;
+    };
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,319 @@
+img {
+  width: 100%;
+
+  height: 100%;
+}
+
+/* Title */
+
+.title-1 {
+  width: fit-content;
+
+  padding: 0.5rem;
+
+  background: #545454;
+
+  color: white;
+
+  font-size: 2rem;
+}
+
+.title-2 {
+  margin-left: auto;
+
+  font-weight: 800;
+
+  text-transform: uppercase;
+}
+
+/*  */
+
+header {
+  position: relative;
+
+  height: 300px;
+
+  padding: var(--padding--);
+
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background-color: var(--main-color--);
+
+  background-image: url("../img/bkg/bkg-taller.jpg");
+
+  background-position: 0 0;
+
+  background-size: cover;
+
+  color: white;
+
+  font-size: 2.5rem;
+
+  font-weight: 700;
+
+  text-align: center;
+
+  /* backdrop-filter: ; */
+}
+
+header i {
+  position: absolute;
+
+  bottom: 2%;
+}
+
+/* Valores */
+
+.valores {
+  width: 100%;
+
+  background: #e4e4e4;
+}
+
+.valores .max-width {
+  width: 100%;
+
+  height: 100%;
+
+  padding: var(--padding--);
+
+  display: grid;
+
+  grid-template-rows: auto 1fr;
+
+  background: #e4e4e4;
+}
+
+.valores .max-width > div {
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  padding: var(--padding--);
+}
+
+.valores .max-width p {
+  text-align: justify;
+
+  color: #545454;
+}
+
+/* Metodologia */
+
+.metodologia,
+.talleres {
+  background: #f2f2f2;
+}
+
+.metodologia .max-width,
+.talleres .max-width {
+  padding: var(--padding--);
+
+  display: flex;
+
+  flex-flow: column-reverse nowrap;
+}
+
+.metodologia .title-2,
+.talleres .title-2 {
+  margin-top: 5px;
+
+  margin-left: auto;
+
+  width: fit-content;
+
+  font-size: 1.6rem;
+
+  letter-spacing: 0%;
+}
+
+.m_content {
+  display: flex;
+
+  flex-flow: column;
+}
+
+.metodologia .m_content div {
+  height: 200px;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  grid-template-rows: 1fr;
+}
+
+.metodologia .m_content div img {
+  height: 100%;
+
+  overflow: hidden;
+}
+
+.metodologia p {
+  text-align: justify;
+
+  color: #545454;
+}
+
+/* Talleres */
+
+.talleres {
+  background: #e4e4e4;
+}
+
+.talleres .title-1 {
+  margin-top: 10px;
+}
+
+.talleres p {
+  margin: 10px 0;
+}
+
+/* Lista de talleres */
+
+.list-taller {
+  background: #f2f2f2;
+}
+
+.list-taller .max-width {
+  padding: var(--padding--);
+
+  display: grid;
+
+  grid-template-columns: 1fr;
+
+  gap: 2rem;
+}
+
+.taller {
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  align-items: center;
+
+  justify-content: center;
+
+  align-self: center;
+}
+
+.taller img {
+  width: 200px;
+
+  height: 200px;
+
+  background: #cdcdcd;
+
+  border-radius: 50%;
+
+  padding: 10px;
+}
+
+.taller .subtitle {
+  color: #830119;
+
+  font-size: 1.8rem;
+
+  text-align: center;
+}
+
+@media screen and (min-width: 550px) {
+  .list-taller .max-width {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .title-2 {
+    margin-right: 5%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  header {
+    font-size: 4rem;
+
+    height: 400px;
+  }
+
+  .title-1 {
+    padding: 0 0.5rem;
+
+    font-size: 2.7rem !important;
+  }
+
+  .title-2 {
+    margin-right: 0;
+
+    font-size: 3rem !important;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  header {
+    font-size: 5rem;
+
+    height: 500px;
+  }
+
+  .max-width {
+    display: grid !important;
+
+    grid-template-columns: 1fr 1fr;
+
+    grid-template-rows: 1fr;
+
+    gap: 2rem;
+
+    padding: 2.5rem 2rem !important;
+  }
+
+  .metodologia img,
+  .talleres img {
+    width: 90%;
+
+    margin-left: 10%;
+  }
+
+  .title-1 {
+    padding: 0 0.5rem;
+
+    font-size: 2.5rem !important;
+  }
+
+  .title-2 {
+    margin-right: 0;
+
+    font-size: 2.7rem !important;
+  }
+
+  p {
+    margin-top: 1rem;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .list-taller .max-width {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .taller img {
+    width: 150px;
+
+    height: 150px;
+  }
+
+  .taller .subtitle {
+    font-size: 0.85rem;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .taller .subtitle {
+    font-size: 1rem;
+  }
+}

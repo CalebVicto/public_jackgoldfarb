@@ -1,0 +1,458 @@
+/* 360 * 640 */
+
+.carousel-header {
+  background: var(--main-bkg--);
+}
+
+.carousel-header,
+.carousel-header img {
+  width: 100%;
+
+  height: 250px;
+}
+
+.bienvenido {
+  background: #cccccc;
+}
+
+.bienvenido .max-width {
+  padding: var(--padding--);
+}
+
+.bienvenido h1 {
+  text-transform: uppercase;
+  line-height: 120%;
+}
+
+.bienvenido p {
+  margin: 20px 0;
+  color: var(--main-color--);
+  font-family: Arial;
+  font-size: 20px;
+}
+
+.bienvenido .yt-video {
+  width: 100%;
+
+  height: 15rem;
+}
+
+/* NIVELES */
+
+.niveles {
+  background-color: var(--gray-bkg--);
+}
+
+.niveles .max-width {
+  padding: var(--padding--);
+
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  gap: 15px;
+
+  align-items: center;
+}
+
+.niveles .title-2 {
+  text-align: center;
+}
+
+.nivel {
+  display: block;
+
+  width: 100%;
+
+  max-width: 320px;
+
+  padding-bottom: 5px;
+}
+
+.nivel h1 {
+  text-transform: capitalize;
+
+  text-align: center;
+
+  color: var(--main-color--);
+}
+
+.nivel div {
+  width: 100%;
+
+  background: #7d8d9c;
+
+  padding-left: 20px;
+
+  padding-bottom: 5px;
+
+  box-shadow: var(--shadow--);
+}
+
+.nivel img {
+  width: 100%;
+
+  height: 250px;
+}
+
+.nivel h3 {
+  color: white;
+
+  font-weight: 600;
+
+  letter-spacing: 1px;
+
+  text-align: center;
+}
+
+/* Eventos */
+
+.eventos {
+  background-image: url("../img/bkg/bkg-evento.jpg");
+
+  background-position: left;
+
+  background-size: cover;
+
+  background-color: white;
+}
+
+.eventos .max-width {
+  position: relative;
+
+  width: 100%;
+
+  padding: var(--padding--);
+}
+
+.eventos .title-2 {
+  text-transform: uppercase;
+
+  text-align: center;
+
+  line-height: 120%;
+
+  margin-bottom: 20px;
+}
+
+/* Card Evento */
+
+.evento_card {
+  padding: 15px;
+
+  max-width: 265px;
+
+  min-height: 280px;
+
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  background: #d1d1d1;
+
+  box-shadow: var(--shadow--);
+
+  margin: 0 10px;
+}
+
+.evento_card img {
+  height: 330px;
+}
+
+.evento_card_fecha {
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  font-size: 3rem;
+
+  font-weight: 800;
+
+  text-align: center;
+
+  line-height: 100%;
+
+  color: white;
+}
+
+.evento_card_fecha span:nth-child(1) {
+  color: #830119;
+}
+
+.evento_card_fecha span:nth-child(2) {
+  font-weight: 600;
+
+  font-size: 3.1rem;
+}
+
+.evento_card_content {
+  margin-top: 10px;
+
+  color: black;
+
+  font-size: 2rem;
+
+  font-weight: 600;
+
+  line-height: 130%;
+
+  text-align: center;
+}
+
+/* Evento carousel */
+
+.carousel-eventos .splide__arrow--prev {
+  left: -2em;
+}
+
+.carousel-eventos .splide__arrow--next {
+  right: -2em;
+}
+
+/* .splide.is-active .splide__list{
+
+  gap: 15px;
+
+} */
+
+/* Noticias */
+
+.noticias {
+  background-image: url("../img/bkg/bkg-noticias.jpg");
+
+  background-position: left;
+
+  background-size: cover;
+}
+
+.noticias .max-width {
+  width: 100%;
+
+  padding: var(--padding--);
+}
+
+.noticias .title-1 {
+  text-align: center;
+
+  text-transform: uppercase;
+
+  margin-bottom: 20px;
+}
+
+.list_noticias {
+  width: 100%;
+
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.card_noticia {
+  position: relative;
+
+  width: 300px;
+
+  min-height: 250px;
+
+  background: #d1d1d1;
+
+  padding: 1rem;
+
+  box-shadow: var(--shadow--);
+}
+
+.title_noticia {
+  position: relative;
+
+  width: 100%;
+
+  font-size: 1.9rem;
+
+  color: #830119;
+
+  word-spacing: 10px;
+
+  font-family: "Calisto";
+
+  font-weight: 700;
+
+  text-align: center;
+
+  border-bottom: 2px solid #830119;
+}
+
+.card_noticia::after {
+  position: absolute;
+
+  content: "";
+
+  width: 1rem;
+
+  height: 1rem;
+
+  background: #830119;
+
+  top: 0;
+
+  left: 5px;
+}
+
+/* .title_noticia::after {
+
+  content: '';
+
+  position: absolute;
+
+  background: var(--main-color--);
+
+  width: 100%;
+
+  height: 2px;
+
+  bottom: 15%;
+
+  left: 0;
+
+} */
+
+.content_noticia {
+  text-align: justify;
+
+  font-size: 1rem;
+}
+
+/* Alianzas Estrategicas */
+
+.alianzas {
+  background: var(--gray-bkg--);
+}
+
+.alianzas .max-width {
+  width: 100%;
+
+  padding: var(--padding--);
+}
+
+.alianzas h1 {
+  font-size: 2.3rem;
+
+  width: 100%;
+
+  text-align: center;
+
+  text-transform: uppercase;
+}
+
+.alianzas .logos {
+  display: flex;
+
+  flex-flow: row wrap;
+
+  justify-content: space-around;
+}
+
+.alianzas .logos img {
+  margin: 2rem 1rem;
+
+  max-width: 280px;
+}
+
+@media screen and (min-width: 500px) {
+  body {
+    padding-top: 20px !important;
+  }
+
+  .list_noticias {
+    align-items: stretch;
+  }
+
+  .card_noticia {
+    width: 330px;
+  }
+
+  .noticias .title-1 {
+    font-size: 3rem;
+
+    border-bottom: 3px solid white;
+
+    margin-bottom: 2rem;
+  }
+
+  .card_noticia::after {
+    width: 1.5rem;
+
+    height: 1.5rem;
+  }
+
+  .title_noticia {
+    font-size: 2rem;
+  }
+
+  .carousel-header,
+  .carousel-header img {
+    width: 100%;
+
+    height: 90vh;
+  }
+
+  .bienvenido .yt-video {
+    width: 100%;
+
+    height: 20rem;
+  }
+
+  .niveles .max-width,
+  .list_noticias {
+    flex-flow: row wrap;
+
+    justify-content: space-around;
+  }
+
+  .alianzas .logos img {
+    width: auto;
+
+    height: 80px;
+  }
+
+  .content_noticia {
+    width: 80%;
+
+    margin: 10px auto;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .bienvenido .max-width {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 2rem;
+  }
+
+  .bienvenido .yt-video {
+    width: 100%;
+
+    height: 100%;
+  }
+
+  .nivel {
+    width: fit-content;
+  }
+
+  .niveles img {
+    width: 240px;
+
+    height: 240px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .bienvenido .max-width {
+    min-height: 50vh;
+  }
+}

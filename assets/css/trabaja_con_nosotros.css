@@ -1,0 +1,32 @@
+input,
+select {
+  margin-left: 20px;
+  width: 300px;
+}
+
+.sub_main {
+  max-width: 500px;
+  margin-right: 100px;
+}
+.main {
+  padding: 0 2.5rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+}
+
+.sub_form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.btn_submit {
+  color: white;
+  background-color: var(--main-color--);
+  padding: 10px 30px 10px 30px;
+  cursor: pointer;
+  border: none;
+  font-size: 18px;
+}

@@ -1,0 +1,140 @@
+img {
+  width: 100%;
+
+  height: auto;
+}
+
+.mision {
+  margin: 50px 0;
+}
+
+.mision .max-width {
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+}
+
+.mision .max-width div {
+  padding-top: 2rem;
+
+  padding-bottom: 3rem;
+
+  padding-right: 4rem;
+
+  padding-left: 0;
+
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  align-items: center;
+
+  /* justify-content: center; */
+}
+
+h1 {
+  color: #830119;
+
+  font-size: 2.1rem;
+
+  font-weight: 800;
+}
+
+p {
+  margin-top: 15px;
+
+  font-size: 1rem;
+
+  text-align: justify;
+}
+
+.vision .max-width {
+  display: grid;
+
+  grid-template-columns: 50% 50%;
+
+  padding-bottom: 3rem;
+}
+
+.vision img {
+  height: 100%;
+}
+
+.vision .max-width div {
+  padding-left: 4rem;
+
+  padding-bottom: 3rem;
+
+  display: flex;
+
+  flex-flow: column nowrap;
+
+  align-items: center;
+
+  /* justify-content: center; */
+}
+
+.vision ol {
+  margin-top: 15px;
+
+  width: 90%;
+
+  font-size: 1rem;
+}
+
+.vision li {
+  margin-bottom: 1rem;
+
+  text-align: justify;
+}
+
+@media screen and (max-width: 950px) {
+  .mision {
+    margin: 0px 0 !important;
+    padding: 15px;
+  }
+
+  .mision .max-width {
+    display: flex;
+
+    flex-flow: column nowrap;
+  }
+
+  .vision .max-width {
+    display: flex;
+
+    flex-flow: column-reverse nowrap;
+
+    padding-top: 20px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  .mision .max-width div,
+  .vision .max-width div {
+    padding: 0 2.5rem;
+
+    padding-top: 2rem;
+
+    padding-bottom: 3rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  p {
+    font-size: 1rem;
+  }
+
+  .mision .max-width div,
+  .vision .max-width div {
+    padding-left: 20px;
+
+    padding-right: 20px;
+  }
+
+  .vision li {
+    text-align: justify;
+  }
+}

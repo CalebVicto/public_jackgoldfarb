@@ -1,0 +1,296 @@
+img {
+  width: 100%;
+}
+
+.admision {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  overflow: hidden;
+}
+
+.redes {
+  bottom: 15%;
+}
+
+.links {
+  height: calc(100vh - 60px);
+  background-color: #830119;
+  background-image: url('../img/bkg/bkg-taller.jpg');
+  background-position: center;
+  background-size: cover;
+  padding: 1rem 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  /* justify-content: center; */
+}
+
+.title {
+  color: white;
+  font-size: 2rem;
+  text-align: center;
+}
+
+.title-1 {
+  width: fit-content;
+  background: #545454;
+  font-size: 3rem;
+  color: white;
+  padding: .2rem 1rem;
+  padding-right: 5rem;
+}
+
+.title-2 {
+  font-size: 2.3rem;
+  color: #830119;
+  font-weight: 800;
+}
+
+.links input {
+  display: none;
+}
+
+.links ul {
+  width: 90%;
+  list-style: none;
+  margin-top: 10%;
+}
+
+.links ul label {
+  display: block;
+  padding: .2rem 2.5rem;
+  padding-bottom: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  border: 1px solid rgb(0, 0, 0, .1);
+  cursor: pointer;
+  background: #545454;
+  color: white;
+  transition: background .2s ease;
+}
+
+.links ul label:hover {
+  background: white;
+  color: #545454;
+}
+
+.l-bienvenida.active,
+.l-vacantes.active,
+.l-requisitos.active,
+.l-proceso.active {
+  background: white;
+  color: #545454;
+}
+
+.contenido {
+  overflow-y: scroll;
+}
+
+.for {
+  /* display: none; */
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 3rem;
+  padding-left: 4rem;
+  padding-top: 1rem;
+}
+
+.for span {
+  margin: 3% 0;
+  color: #231F20;
+  font-size: 2rem;
+}
+
+.for p {
+  width: 85%;
+  font-size: 1.6rem;
+  color: #231F20;
+  text-align: justify;
+}
+
+.vacantes p,
+.requisitos p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.vacantes ul {
+  list-style: inside;
+}
+
+.vacantes ul li {
+  margin-top: 10px;
+}
+
+.requisitos p {
+  font-size: 1.2rem;
+}
+
+/* Proceso */
+.proceso {
+  position: relative;
+  padding-bottom: 0px;
+}
+
+.proceso .title-1 {
+  font-size: 2rem;
+}
+
+.proceso p {
+  padding: 1rem;
+}
+
+.proceso img {
+  width: 200px;
+  margin: 0 auto;
+  margin-bottom: 45px;
+}
+
+.proceso i {
+  position: fixed;
+  bottom: 1%;
+  right: 1%;
+  margin: 0 auto;
+  font-size: 4rem;
+}
+
+.proceso .btns {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.proceso .btns div {
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+
+.btns a {
+  margin: 5px;
+  padding: 1rem;
+  font-weight: 700;
+  color: #830119;
+  border: 3px solid #830119;
+  font-size: 1.1rem;
+  transition: all .3s ease;
+  text-align: center;
+}
+
+.btns a:nth-child(2) {
+  background: #830119;
+  color: white;
+}
+
+.btns a:hover {
+  transform: scale(1.025);
+}
+
+/*  */
+.abrir {
+  display: none;
+}
+
+.fachada {
+  margin: auto;
+  margin-top: 30px;
+  width: 450px;
+  height: 450px;
+  border-radius: 5%;
+  border: 4px solid #830119;
+}
+
+@media screen and (max-width: 970px) {
+  .abrir {
+    z-index: 1;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    top: 0;
+    left: 0;
+    color: #a03f42;
+    height: 100%;
+  }
+
+  .abrir:hover~.links {
+    transform: translateX(0%);
+  }
+
+  .admision {
+    overflow-y: scroll;
+    position: relative;
+    display: block;
+  }
+
+  .links {
+    z-index: 2;
+    position: fixed;
+    width: 400px;
+    transition: all .3s ease;
+    transform: translateX(-100%);
+  }
+
+  .for {
+    padding-top: 3.5rem;
+  }
+
+  .fachada {
+    width: 100%;
+    height: 70vw;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .for {
+    padding: 2rem 0;
+    padding-left: 2.4rem;
+    padding-right: 60px;
+  }
+
+  .for p {
+    text-align: justify;
+    width: 100%;
+    /* font-size: 1rem; */
+  }
+
+  .vacantes p {
+    font-size: 1.1rem;
+  }
+
+  .vacantes ul {
+    margin-left: 10px;
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .title-1 {
+    width: fit-content;
+    padding: .2rem 1rem;
+    font-size: 1.8rem !important;
+  }
+
+  .for p {
+    font-size: 1rem;
+  }
+
+  .vacantes ul {
+    font-size: 1rem;
+  }
+
+  .links {
+    overflow: scroll;
+    width: 100%;
+  }
+
+  .links ul label {
+    padding: 5px 10px;
+    font-size: 2rem;
+  }
+}

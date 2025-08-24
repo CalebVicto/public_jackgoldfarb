@@ -1,0 +1,113 @@
+body {
+  background-color: #830119;
+  padding-right: 15%;
+  background-image: url('../img/bkg/bkg-niveles.png');
+  background-position: top;
+  background-size: contain;
+  background-repeat: repeat-y;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  font-size: 4rem;
+  color: white;
+  font-weight: 700;
+  padding: 1.2rem;
+  padding-left: 5%;
+}
+
+.title-1 {
+  color: #830119;
+  font-size: 3rem;
+}
+
+/* Inicial */
+.inicial {
+  background: #e4e4e4;
+  padding: 3rem 5%;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+}
+
+.inicial div {
+  padding-right: 10%;
+}
+
+.inicial p {
+  margin-top: 5px;
+  font-size: .9rem;
+  text-align: justify;
+}
+
+.inicial img {
+  margin: auto;
+}
+
+/* Primaria */
+
+.primaria {
+  background: #e4e4e4;
+  padding: 3rem 5%;
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  border-top: 3px solid #830119;
+  border-bottom: 3px solid #830119;
+}
+
+.primaria div {
+  padding-left: 10%;
+}
+
+.primaria p {
+  margin-top: 5px;
+  font-size: .9rem;
+  text-align: justify;
+}
+
+.primaria img {
+  margin: auto;
+}
+
+footer {
+  width: 100%;
+  position: absolute;
+}
+
+@media screen and (max-width:750px) {
+  body {
+    padding-right: 0;
+  }
+
+  .inicial {
+    padding: 1rem 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 3fr;
+  }
+
+  .inicial div {
+    padding: 20px 0;
+  }
+
+  .primaria {
+    padding: 3rem 5%;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr auto;
+  }
+
+  .primaria div {
+    padding-top: 20px;
+    padding-left: 0;
+  }
+}
+
+@media screen and (max-width:420px) {
+  header {
+    font-size: 2.5rem;
+  }
+  .title-1{
+    font-size: 2.5rem;
+  }
+}

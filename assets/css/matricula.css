@@ -1,0 +1,146 @@
+.matricula {
+  /* height: calc(100vh - 60px); */
+  width: 100%;
+  margin-bottom: 1px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.matricula img {
+  width: 100%;
+  height: 100%;
+}
+
+.matricula div {
+  padding: 2rem;
+  padding-top: 1.5rem;
+  background: #830119;
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+.matricula h1 {
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+}
+
+.matricula span {
+  padding: 5px 20px;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  background: lightgray;
+  border-radius: 20px;
+  color: #830119;
+}
+
+.matricula p {
+  width: 80%;
+  font-size: .9rem;
+  color: white;
+  font-weight: 300;
+}
+
+.matricula form {
+  margin-top: 30px;
+  width: 60%;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 15px;
+}
+
+.matricula input {
+  background: #545454;
+  outline: none;
+  border: 1px;
+  font-size: 1rem;
+  padding: 5px 10px;
+  color: white;
+}
+
+.matricula input::placeholder,
+.matricula textarea::placeholder {
+  color: rgb(180, 180, 180);
+}
+
+.matricula textarea {
+  background: #545454;
+  font-size: 1rem;
+  padding: 5px 10px;
+  min-height: 50px;
+  color: white;
+  outline: none;
+}
+
+.matricula select {
+  padding: 5px 10px;
+  font-size: 1rem;
+  background: #545454;
+  color: rgb(180, 180, 180);
+  color: white;
+  outline: none;
+}
+
+.matricula select option {
+  padding: 5px 8px;
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+  outline: none;
+}
+
+.matricula label {
+  color: white;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  -webkit-text-fill-color: rgb(255, 255, 255);
+  -webkit-box-shadow: 0 0 0px 1000px #545454 inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.matricula input[type='submit'] {
+  cursor: pointer;
+  border-radius: 10px;
+  font-size: 1.3rem;
+  background: white;
+  color: #830119;
+  font-weight: 800;
+}
+
+@media screen and (max-width: 900px) {
+  .matricula {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+  }
+
+  .matricula img {
+    display: none;
+    width: 100%;
+    height: 100%;
+    /* margin-top: -22vh; */
+  }
+
+}
+
+@media screen and (max-width: 430px) {
+  .matricula div{
+    padding: 20px 0;
+  }
+  .matricula form{
+    width: 90%;
+  }
+}

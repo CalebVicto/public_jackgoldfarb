@@ -1,0 +1,184 @@
+img {
+  width: 100%;
+  height: auto;
+}
+
+.equipo-trabajo,
+.promotor,
+.directora {
+  padding: 10px;
+}
+
+.line {
+  display: none;
+}
+
+.promotor .max-width {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+.max-width {
+  padding: 3rem 0;
+}
+
+.promotor .max-width div,
+.equipo-trabajo .max-width div {
+  padding: 3rem 3rem;
+  background: white;
+}
+
+.directora .max-width img {
+  width: 90%;
+  margin-left: 10%;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 700;
+  text-align: center;
+  color: #830119;
+}
+
+p {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+/* .promotor img {
+  height: 500px;
+} */
+
+.directora .max-width {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+.equipo-trabajo .max-width {
+  display: grid;
+  grid-template-columns: 45% 55%;
+}
+
+.equipo-trabajo ul {
+  margin: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  list-style: inside;
+}
+
+.equipo-trabajo img {
+  /* height: auto; */
+  margin: auto;
+}
+
+
+@media screen and (max-width: 890px) {
+
+  .promotor .max-width div,
+  .equipo-trabajo .max-width div {
+    padding-top: 0;
+  }
+
+  .line {
+    display: block;
+  }
+
+  .directora .max-width div {
+    padding: 3rem;
+    padding-top: 0;
+  }
+
+  .promotor img,
+  .directora img,
+  .equipo-trabajo img {
+    margin: 0 auto !important;
+    width: 70% !important;
+    margin-bottom: 30px;
+    /* max-height: 500px; */
+  }
+
+  .promotor .max-width,
+  .equipo-trabajo .max-width {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+  }
+
+  .equipo-trabajo div {
+    padding-bottom: 0;
+  }
+
+
+  .directora .max-width {
+    display: flex;
+    flex-flow: column nowrap;
+  }
+}
+
+@media screen and (max-width: 890px) {
+  .equipo-trabajo ul {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .promotor img,
+  .directora img,
+  .equipo-trabajo img {
+    width: 70% !important;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .equipo-trabajo ul {
+    align-items: center;
+    text-align: center;
+    grid-template-columns: 1fr;
+  }
+
+  .equipo-trabajo,
+  .promotor,
+  .directora {
+    padding: 0px;
+  }
+
+  .max-width {
+    padding: 0;
+  }
+
+  .promotor img,
+  .directora img,
+  .equipo-trabajo img {
+    width: 90% !important;
+  }
+
+  .equipo-trabajo .max-width {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+
+  .promotor img,
+  .directora img,
+  .equipo-trabajo img {
+    width: 80%;
+    /* height: 350px; */
+  }
+
+
+
+  .promotor .max-width div,
+  .equipo-trabajo .max-width div,
+  .directora .max-width div {
+    padding: 3rem 1rem;
+    background: white;
+  }
+
+  .directora img {
+    margin-bottom: 40px;
+  }
+}

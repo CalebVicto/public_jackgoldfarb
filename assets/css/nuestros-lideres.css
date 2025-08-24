@@ -1,0 +1,28 @@
+.photos_lideres {
+  display: flex;
+  justify-content: center;
+}
+
+.photos_lideres img {
+  width: 530px;
+  padding: 20px;
+}
+
+.photos_lideres_2 {
+  display: flex;
+  justify-content: center;
+}
+
+.photos_lideres_2 img {
+  width: 1050px;
+  padding: 20px;
+}
+
+.title_lider {
+  text-align: center;
+}
+
+.main_photo_lider {
+  padding: 3rem 0 3rem 0;
+  align-self: center;
+}

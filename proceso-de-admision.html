@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Colegio Jack Goldfarb</title>
+
+  <link rel="shortcut icon" href="./assets/img/logo.ico" type="image/x-icon" />
+
+  <link rel="stylesheet" href="assets/css/general.css" />
+
+  <link rel="stylesheet" href="assets/css/admision-3.css" />
+
+  <link rel="stylesheet" href="assets/css/responsive.css" />
+
+  <!-- BoxIcons -->
+
+  <link href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-PWV2DPJY41"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+
+    gtag("config", "G-PWV2DPJY41");
+  </script>
+
+  <!-- NAV -->
+
+  <nav id="nav">
+    <a class="logo" href="./">
+      <img src="./assets/img/logos_oficial.png" alt="" />
+    </a>
+
+    <ul class="nav-menu">
+      <li><a href="./">inicio</a></li>
+      <li>
+        <a id="nosotros">nosotros <i class="bx bxs-down-arrow"></i></a>
+        <ul class="submenu" id="sub_nosotros">
+          <li>
+            <a class="menu__link submenu-btn" href="./quienes-somos.html">¿Quiénes Somos?
+            </a>
+            <ul class="submenu2">
+              <li>
+                <a href="./nuestra-historia.html" class="menu__link">Nuestra historia</a>
+              </li>
+              <li>
+                <a href="./nuestros-lideres.html" class="menu__link">Nuestros líderes</a>
+              </li>
+              <li>
+                <a href="./nuestros-patrocinadores.html" class="menu__link">Nuestros patrocinadores</a>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./mision-vision.html">Misión y Visión</a></li>
+          <li class="container-submenu">
+            <a href="./himno.html">Himno de Nuestro Colegio</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./valores_institucionales.html">Valores institucionales</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./colaboradores.html">Colaboradores</a>
+          </li>
+          <li class="container-submenu">
+            <a href="./familias_fvc.html">Familias FVC </a>
+          </li>
+          <li>
+            <a href="./premios-distinciones.html">Premios y Distinciones</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a id="admision">admisión <i class="bx bxs-down-arrow"></i></a>
+
+        <ul class="submenu" id="sub_admision">
+          <li><a href="./porque-elegirnos.html">¿Por qué elegirnos?</a></li>
+
+          <li><a href="./niveles-educativos.html">Niveles</a></li>
+
+          <li>
+            <a href="./proceso-de-admision.html">Proceso de admisión</a>
+          </li>
+
+          <li><a href="./solicitar-info.html">Solicitar Información</a></li>
+        </ul>
+      </li>
+
+      <li>
+        <a href="./contacto.html">contacto <i class="bx bxs-down-arrow"></i></a>
+
+        <ul class="submenu" id="sub_admision">
+          <li>
+            <a href="./forma_parte_equipo.html">Forma parte de nuestro equipo</a>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <a target="_blank" href="https://jackgoldfarb.cubicol.pe/">cubicol</a>
+      </li>
+
+      <li><img src="./assets/img/logo_school_home.png" alt="" /></li>
+    </ul>
+
+    <i id="menu-open" class="bx bx-menu"></i>
+  </nav>
+
+  <!-- FIN NAV -->
+
+  <!-- Admision -->
+
+  <div class="admision">
+    <div class="abrir"><i class="bx bx-chevrons-right bx-tada"></i></div>
+
+    <div class="links">
+      <h2 class="title">
+        PROCESO <br />
+        DE ADMISIÓN <br />
+        2025
+      </h2>
+
+      <ul>
+        <li>
+          <label class="l-bienvenida" for="bienvenida">Bienvenida</label>
+        </li>
+
+
+        <li>
+          <label class="l-requisitos" for="requisitos">Requisitos</label>
+        </li>
+
+        <li onclick="openpdf()">
+          <label>Reglamento Interno</label>
+        </li>
+
+        <li onclick="openProcesoAdmision()"><label>Proceso</label></li>
+      </ul>
+
+      <input type="radio" name="proceso" id="bienvenida" checked />
+
+      <input type="radio" name="proceso" id="requisitos" />
+    </div>
+
+    <div class="contenido">
+      <div class="for bienvenida">
+        <!-- Bienvenida -->
+
+        <h2 class="title-1">Bienvenida</h2>
+
+        <span>ADMISIÓN 2025</span>
+
+        <p>
+          Damos la bienvenida a todos los padres interesados en matricular a
+          sus hijos en nuestra IEP Jack Goldfarb. <br />
+
+          A continuación, brindamos información detallada sobre el proceso de
+          admisión para todos los niveles desde 3 años de inicial hasta 5° año
+          de secundaria.
+        </p>
+
+        <img class="fachada" src="./assets/img/fachada.png" alt="" />
+
+        <div style="padding: 0;margin-top: 40px;" class="for vacantes">
+          <h2 class="title-1">VACANTES</h2>
+
+          <p>
+            A continuación, en cumplimiento de la RM. N°447-2020-MINEDU,
+            brindamos información sobre las vacantes que por el momento se encuentran disponibles desde el nivel inicial
+            de 3
+            años hasta 5° año de secundaria.
+            <br />
+            La cantidad de vacantes varía de acuerdo a las matrículas que se van realizando.
+          </p>
+
+          <ul>
+            <li>3 AÑOS: 12 vacantes</li>
+
+            <li>4 AÑOS: 5 vacantes</li>
+
+            <li>5 AÑOS: 1 vacante</li>
+
+            <li>1° GRADO: 5 vacantes</li>
+
+            <li>2° GRADO: 0 vacantes</li>
+
+            <li>3° GRADO: 0 vacantes</li>
+
+            <li>4° GRADO: 0 vacantes</li>
+
+            <li>5° GRADO: 1 vacantes</li>
+
+            <li>6° GRADO: 0 vacantes</li>
+
+            <li>1° AÑO: 2 vacantes</li>
+
+            <li>2° AÑO: 0 vacantes</li>
+
+            <li>3° AÑO: 0 vacantes</li>
+
+            <li>4° AÑO: 1 vacantes</li>
+
+            <li>5° AÑO: 0 vacantes</li>
+          </ul>
+
+          <img class="fachada" src="./assets/img/admi.JPG" alt="" />
+        </div>
+
+      </div>
+
+
+      <div class="for requisitos">
+        <h2 class="title-1">REQUISITOS</h2>
+
+        <p>
+          Los postulantes del nivel inicial hasta primer grado de primaria
+          deben haber cumplido la edad cronológica requerida, según el año al
+          que postulan es hasta 31 de marzo de 2025. <br />
+          <br />
+
+          3 AÑOS: debe tener 3 años cumplidos al 31 de marzo 2025 <br /><br />
+
+          4 AÑOS: debe tener 4 años cumplidos al 31 de marzo 2025 <br /><br />
+
+          5 AÑOS: debe tener 5 años cumplidos al 31 de marzo 2025 <br /><br />
+
+          1° GRADO: debe tener 6 años cumplidos al 31 de marzo 2025
+        </p>
+        <br />
+        <div>
+          <table>
+            <tr>
+              <td>
+                1. Solicitud de vacante, que deberá ser descargada por el usuario, imprimirla, llenar todos los datos
+                requeridos de manera manual, escanearlo en formato PDF y cargarlo en el sistema.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                2. Documento Nacional de Identidad (DNI) del estudiante (ambas caras) en un solo archivo en formato PDF.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                3. Documento Nacional de Identidad (DNI) de los padres (ambas caras) en un solo archivo en formato PDF.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                4. Constancia de no adeudo del colegio de procedencia (si
+                proviene de un colegio privado).
+              </td>
+            </tr>
+            <tr>
+              <td>
+                5. Libreta de Notas actual del colegio de procedencia.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                6. Recibo de agua o luz actualizado.
+              </td>
+            </tr>
+            <tr>
+              <td>
+                7. Tres últimas boletas de pago del padre o de la madre en un solo archivo en formato PDF. (si es
+                dependiente)
+                <br>Solo en caso de ser independiente: Reporte tributario de rentas de cuarta categoría o reporte
+                tributario para terceros, enviar desde la plataforma SUNAT al correo: jgadmision@gmail.com
+              </td>
+            </tr>
+            <tr>
+              <td>
+                8. De ser necesario se solicitará algún otro documento en formato físico durante el proceso de Admisión.
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+
+      <div class="for proceso">
+
+        <div class="btns">
+          <!-- <img src="./assets/img/admision/proceso-4.png" alt="final" /> -->
+
+          <div>
+            <a target="_blank" href="./proceso_admision_2024.pdf">MAYOR INFORMACIÓN</a>
+
+            <a target="_blank" href="https://jackgoldfarb.cubicol.pe/visitante/registro-interesados">INICIAR EL
+              PROCESO</a>
+          </div>
+        </div>
+
+        <i class="bx bx-chevron-down bx-tada"></i>
+      </div>
+    </div>
+  </div>
+
+  <!-- Redes -->
+
+  <div class="redes">
+    <a target="_blank" href="https://www.facebook.com/jackgoldfarbschool" class="facebook">f</a>
+
+    <a target="_blank" href="https://wa.link/pk5zid" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
+
+    <a target="_blank" href="https://www.instagram.com/colegiojackgoldfarb" class="instagram"><span></span></a>
+
+    <a target="_blank" href="https://www.youtube.com/channel/UC9afS2Bijsk_UDESBMfmxuA" class="youtube"></a>
+  </div>
+
+  <script>
+    let procesos = ["bienvenida", "requisitos"];
+
+    const handlePestañas = () => {
+      procesos.forEach((item) => {
+        if (document.getElementById(item).checked) {
+          document.querySelector(".l-" + item).classList.add("active");
+          if (document.querySelector("." + item)) {
+            document.querySelector("." + item).style.display = "flex";
+          }
+
+        } else {
+
+          document.querySelector(".l-" + item).classList.remove("active");
+          const found = document.querySelector("." + item)
+          if (found) {
+            found.style.display = "none";
+          }
+
+        }
+      });
+    };
+
+    handlePestañas();
+
+    let links = document.getElementsByTagName("label");
+
+    for (var i = 0, il = links.length; i < il; i++) {
+      links[i].onclick = () => {
+        setTimeout(() => {
+          handlePestañas();
+        }, [140]);
+      };
+    }
+
+    // NAV
+
+    var m_query = window.matchMedia("(max-width: 1024px)");
+
+    if (m_query.matches) {
+      document.getElementById("admision").onclick = () => {
+        document
+          .getElementById("sub_admision")
+          .classList.toggle("sub_active");
+      };
+
+      document.getElementById("nosotros").onclick = () => {
+        document
+          .getElementById("sub_nosotros")
+          .classList.toggle("sub_active");
+      };
+
+      document.getElementById("menu-open").onclick = () => {
+        document.querySelector(".nav-menu").classList.toggle("nav-active");
+      };
+    }
+
+    window.onscroll = function () {
+      var top = window.pageYOffset || document.documentElement.scrollTop;
+      if (top > 100) {
+        document.getElementById("nav").style.background = "#830119";
+      } else {
+        document.getElementById("nav").style.background = "transparent";
+        document.getElementById("nav").style.backgroundImage =
+          "linear-gradient(to top,transparent,var(--main-color--) 65px)";
+      }
+    };
+
+    function openpdf() {
+      window.open("reglamento_interno_2025.pdf", "_blank");
+    }
+
+    function openProcesoAdmision() {
+      window.open("proceso_admision_2025.pdf", "_blank");
+    }
+  </script>
+</body>
+
+</html>

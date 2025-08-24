@@ -1,0 +1,74 @@
+img {
+  width: 100%;
+}
+
+.reconocimiento{
+  background: #7D8D9C;
+}
+.reconocimiento .max-width {
+  padding: var(--padding--);
+  display: flex;
+  flex-flow: column nowrap;
+  margin-bottom: 1px;
+}
+
+.title-1a {
+  color: #830119;
+  font-size: 2.5rem;
+  font-weight: 800;
+  text-align: center;
+}
+
+.title-2 {
+  background: #545454;
+  color: white !important;
+  font-weight: 800;
+  font-size: 2.3rem;
+  padding: .3rem 2rem;
+  width: fit-content;
+  margin: 5px auto;
+}
+
+.reconocimiento .max-width div {
+  display: grid;
+  grid-template-columns: 55% 45%;
+  gap: 25px;
+}
+
+.reconocimiento p {
+  text-align: justify;
+  color: white;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 850px) {
+  .reconocimiento .max-width div {
+    display: flex;
+    flex-flow: column-reverse nowrap;
+  }
+
+  .reconocimiento .max-width div p {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .title-1a {
+    font-size: 2.4rem;
+  }
+
+  .title-2 {
+    width: 100%;
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 400px) {
+
+  .title-1a,
+  .title-2 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+}

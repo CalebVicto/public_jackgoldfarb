@@ -1,0 +1,145 @@
+@media screen and (max-width: 1024px) {
+  .carousel-header {
+    margin-top: -55px !important;
+  }
+
+  .float_text_left {
+    top: 25%;
+  }
+  .float_text_center {
+    top: 45%;
+  }
+  .float_text p {
+    font-size: 20px;
+  }
+  .float_buttons {
+    top: 70%;
+    padding: 0px;
+    justify-content: space-around;
+  }
+  .float_buttons button {
+    width: 150px;
+    font-size: 10px;
+  }
+
+  .float_buttons .btn_1 {
+    height: 30px;
+  }
+  .float_buttons .btn_2 {
+    height: 40px;
+  }
+
+  .submenu {
+    height: auto !important;
+  }
+  nav ul {
+    /* display: none; */
+
+    overflow: scroll;
+
+    position: absolute;
+
+    top: 100%;
+
+    right: 0;
+
+    width: 320px;
+
+    display: block;
+
+    flex-flow: column nowrap;
+
+    background: white;
+
+    justify-content: start;
+
+    transition: all 0.3s ease;
+  }
+
+  .photos_lideres {
+    display: block !important;
+  }
+
+  .photos_lideres img {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  .photos_lideres_2 img {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+  .nav-menu {
+    transform: translateX(150%);
+  }
+
+  .nav-menu.nav-active {
+    transform: translateX(0%);
+  }
+
+  nav ul li a {
+    display: flex;
+
+    height: 100%;
+
+    width: 100%;
+
+    flex-flow: row nowrap;
+
+    text-align: center;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    text-align: left;
+
+    font-size: 1.2rem;
+
+    padding: 1rem 2.4rem;
+
+    margin: 0;
+
+    color: var(--main-color--);
+  }
+
+  #menu-open {
+    display: block;
+
+    cursor: pointer;
+
+    font-size: 2rem;
+  }
+
+  .submenu {
+    position: relative;
+
+    /* display: flex; */
+  }
+
+  .submenu a {
+    width: 100%;
+
+    font-size: 1rem;
+
+    padding: 1rem 2.4rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  nav > ul img {
+    width: 25%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  footer {
+    padding: var(--padding--);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  nav {
+    padding: 0 15px;
+  }
+}

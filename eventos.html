@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Colegio Jack Goldfarb</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/logo.ico"
+      type="image/x-icon"
+    />
+
+    <!-- BoxIcons -->
+
+    <link
+      href="https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/general.css" />
+
+    <link rel="stylesheet" href="assets/css/mision-vision.css" />
+
+    <link rel="stylesheet" href="assets/css/responsive.css" />
+
+    <link rel="stylesheet" href="assets/css/events.css" />
+  </head>
+
+  <body>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-PWV2DPJY41"
+    ></script>
+
+    <script>
+      window.dataLayer = window.dataLayer || [];
+
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+
+      gtag("js", new Date());
+
+      gtag("config", "G-PWV2DPJY41");
+    </script>
+
+    <!-- NAV -->
+
+    <nav id="nav">
+      <a class="logo" href="./">
+        <img src="./assets/img/logos_oficial.png" alt="" />
+      </a>
+
+      <ul class="nav-menu">
+        <li><a href="./">inicio</a></li>
+        <li>
+          <a id="nosotros">nosotros <i class="bx bxs-down-arrow"></i></a>
+          <ul class="submenu" id="sub_nosotros">
+            <li>
+              <a class="menu__link submenu-btn" href="./quienes-somos.html"
+                >¿Quiénes Somos?
+              </a>
+              <ul class="submenu2">
+                <li>
+                  <a href="./nuestra-historia.html" class="menu__link"
+                    >Nuestra historia</a
+                  >
+                </li>
+                <li>
+                  <a href="./nuestros-lideres.html" class="menu__link"
+                    >Nuestros líderes</a
+                  >
+                </li>
+                <li>
+                  <a href="./nuestros-patrocinadores.html" class="menu__link"
+                    >Nuestros patrocinadores</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li><a href="./mision-vision.html">Misión y Visión</a></li>
+            <li class="container-submenu">
+              <a href="./himno.html">Himno de Nuestro Colegio</a>
+            </li>
+            <li class="container-submenu">
+              <a href="./valores_institucionales.html"
+                >Valores institucionales</a
+              >
+            </li>
+            <li class="container-submenu">
+              <a href="./colaboradores.html">Colaboradores</a>
+            </li>
+            <li class="container-submenu">
+              <a href="./familias_fvc.html">Familias FVC </a>
+            </li>
+            <li>
+              <a href="./premios-distinciones.html">Premios y Distinciones</a>
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a id="admision">admisión <i class="bx bxs-down-arrow"></i></a>
+
+          <ul class="submenu" id="sub_admision">
+            <li><a href="./porque-elegirnos.html">¿Por qué elegirnos?</a></li>
+
+            <li><a href="./niveles-educativos.html">Niveles</a></li>
+
+            <li>
+              <a href="./proceso-de-admision.html">Proceso de admisión</a>
+            </li>
+
+            <li><a href="./solicitar-info.html">Solicitar Información</a></li>
+          </ul>
+        </li>
+
+        <li>
+          <a href="./contacto.html"
+            >contacto <i class="bx bxs-down-arrow"></i
+          ></a>
+
+          <ul class="submenu" id="sub_admision">
+            <li>
+              <a href="./forma_parte_equipo.html"
+                >Forma parte de nuestro equipo</a
+              >
+            </li>
+          </ul>
+        </li>
+
+        <li>
+          <a target="_blank" href="https://jackgoldfarb.cubicol.pe/">cubicol</a>
+        </li>
+
+        <li><img src="./assets/img/logo_school_home.png" alt="" /></li>
+      </ul>
+
+      <i id="menu-open" class="bx bx-menu"></i>
+    </nav>
+
+    <!-- FIN NAV -->
+
+    <div id="app" class="container">
+      <div v-if="!showDetailEvent">
+        <div class="app-header d-flex">
+          <h1>{{currentMesEvent.mes}} {{new Date().getFullYear()}}</h1>
+          <div class="d-flex align-items-center ml-40">
+            <button @click="anterior" class="btn btn-previus">PREVIUS</button>
+            <button @click="siguiente" class="btn btn-next">NEXT</button>
+          </div>
+        </div>
+        <div class="app-body">
+          <div
+            class="app-container-event d-flex w-100"
+            v-for="item in currentMesEvent.data"
+          >
+            <div class="bg_image col-2">
+              <img v-bind:src="item.imagen" alt="" />
+            </div>
+            <div class="day_info col-2">
+              <p class="main_text">{{currentMesEvent.mes}}</p>
+              <div class="d-flex justify-content-center">
+                <p class="fecha_text">{{item.fecha}}</p>
+              </div>
+
+              <p class="main_text">{{item.dia}}</p>
+            </div>
+            <div class="information col-8">
+              <p v-for="texto in item.texto.split('\n')">{{texto}}</p>
+              <div class="d-flex w-100 justify-content-center mt-20">
+                <button @click="selectEvent(item)" class="content-event">
+                  VER CONTENIDO DEL EVENTO
+                </button>
+              </div>
+            </div>
+          </div>
+          <div
+            class="d-flex justify-content-center h-500 align-items-center"
+            v-if="currentMesEvent.data.length == 0"
+          >
+            <p class="fs-30">No se registraron eventos para este mes</p>
+          </div>
+        </div>
+      </div>
+      <div v-else>
+        <div class="app-header d-flex">
+          <h1>{{currentEvent.titulo}}</h1>
+        </div>
+        <div class="app-body">
+          <div v-if="currentEvent.content">
+            <div v-if="currentEvent.content.imagen">
+              <p class="title_text mb-20">Ganadores de Nivel Primaria</p>
+              <div class="d-flex">
+                <div
+                  v-for="img in currentEvent.content.images_primaria"
+                  class="col-4"
+                >
+                  <img class="image_diploma" v-bind:src="img" alt="" />
+                </div>
+              </div>
+              <p class="title_text mb-20">Ganadores de Nivel Secundaria</p>
+              <div class="d-flex mb-40">
+                <div
+                  v-for="img in currentEvent.content.images_secundaria"
+                  class="col-4"
+                >
+                  <img class="image_diploma" v-bind:src="img" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="mt-20 mb-40" v-else-if="currentEvent.content.video">
+              <video class="w-100" autoplay controls>
+                <source
+                  v-bind:src="currentEvent.content.videoUrl"
+                  type="video/mp4"
+                />
+              </video>
+            </div>
+          </div>
+          <div v-else>
+            <div class="d-flex justify-content-center h-500 align-items-center">
+              <p class="fs-30">No hay contenido disponible del evento</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <footer>
+      <ul>
+        <ul>
+          <li>
+            <span>admisión</span>
+
+            <ul>
+              <li><a href="./porque-elegirnos.html">¿Por qué elegirnos?</a></li>
+
+              <li><a href="./niveles-educativos.html">Niveles</a></li>
+
+              <li>
+                <a href="./proceso-de-admision.html">Proceso de admisión</a>
+              </li>
+
+              <li><a href="./solicitar-info.html">Solicitar información</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <span>nosotros</span>
+
+            <ul>
+              <li><a href="./quienes-somos.html">¿Quienes Somos?</a></li>
+              <li><a href="./nuestra-historia.html">Nuestra Historia</a></li>
+              <li><a href="./nuestros-lideres.html">Nuestros Líderes</a></li>
+              <li>
+                <a href="./nuestros-patrocinadores.html"
+                  >Nuestros Patrocinadores</a
+                >
+              </li>
+              <li><a href="./mision-vision.html">Misión y Visión</a></li>
+              <li><a href="./himno.html">Himno de Nuestro Colegio</a></li>
+              <li>
+                <a href="./valores_institucionales.html"
+                  >Valores Institucionales</a
+                >
+              </li>
+              <li><a href="./colaboradores.html">Colaboradores</a></li>
+              <li><a href="./familias_fvc.html">Familias FVC</a></li>
+              <li>
+                <a href="./premios-distinciones.html">Premios y distinciones</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <span>contactos</span>
+
+            <ul>
+              <li><a href="./contacto.html">Número de contacto</a></li>
+            </ul>
+          </li>
+        </ul>
+
+        <ul>
+          <li>
+            <span
+              ><a target="_blank" href="https://jackgoldfarb.cubicol.pe/"
+                >CUBICOL</a
+              ></span
+            >
+          </li>
+        </ul>
+
+        <ul>
+          <a href="https://forms.gle/W5r4F8yL1sT7asrs7">
+            <img
+              style="width: 150px; margin-top: 20px; cursor: pointer"
+              src="./assets/img/btn_libro_reclamaciones.jpg"
+              alt=""
+          /></a>
+        </ul>
+      </ul>
+
+      <div class="autor">&copy; Copyright 2021 Colegio Jack Goldfarb</div>
+    </footer>
+
+    <!-- Redes -->
+
+    <div class="redes">
+      <a
+        target="_blank"
+        href="https://www.facebook.com/jackgoldfarbschool"
+        class="facebook"
+        >f</a
+      >
+
+      <a target="_blank" href="https://wa.link/pk5zid" class="whatsapp"
+        ><i class="bx bxl-whatsapp"></i
+      ></a>
+
+      <a
+        target="_blank"
+        href="https://www.instagram.com/colegiojackgoldfarb"
+        class="instagram"
+        ><span></span
+      ></a>
+
+      <a
+        target="_blank"
+        href="https://www.youtube.com/channel/UC9afS2Bijsk_UDESBMfmxuA"
+        class="youtube"
+      ></a>
+    </div>
+
+    <script>
+      // NAV
+
+      var m_query = window.matchMedia("(max-width: 1024px)");
+
+      if (m_query.matches) {
+        document.getElementById("admision").onclick = () => {
+          document
+            .getElementById("sub_admision")
+            .classList.toggle("sub_active");
+        };
+
+        document.getElementById("nosotros").onclick = () => {
+          document
+            .getElementById("sub_nosotros")
+            .classList.toggle("sub_active");
+        };
+
+        document.getElementById("menu-open").onclick = () => {
+          document.querySelector(".nav-menu").classList.toggle("nav-active");
+        };
+      }
+
+      window.onscroll = function () {
+        var top = window.pageYOffset || document.documentElement.scrollTop;
+        if (top > 100) {
+          document.getElementById("nav").style.background = "#830119";
+        } else {
+          document.getElementById("nav").style.background = "transparent";
+          document.getElementById("nav").style.backgroundImage =
+            "linear-gradient(to top,transparent,var(--main-color--) 65px)";
+        }
+      };
+    </script>
+
+    <script>
+      new Vue({
+        el: "#app",
+        data: {
+          mesActual: `${new Date().getMonth()}`,
+          mesCurrent: null,
+          currentMesEvent: {},
+          currentEvent: {},
+          showDetailEvent: false,
+          events: [
+            {
+              id: 8,
+              mes: "Setiembre",
+              data: [
+                {
+                  titulo: "3º Concurso Escolar de Cubo de Rubik",
+                  dia: "viernes",
+                  fecha: "03",
+                  imagen: "./assets/img/eventos/setiembre/concurso_rubik.png",
+                  texto:
+                    "Agradecemos a los estudiantes quienes participaron en este III Concurso Escolar de Cubo de Rubik, los animamos a preparárse para el siguiente años 2022.\n Felicitamos a los estudiantes que quedaron como ganadores de este esperado concurso.",
+                  content: {
+                    imagen: true,
+                    video: false,
+                    images_primaria: [
+                      "./assets/img/eventos/setiembre/diploma_rubik.jpg",
+                      "./assets/img/eventos/setiembre/diploma_rubik.jpg",
+                      "./assets/img/eventos/setiembre/diploma_rubik.jpg",
+                    ],
+                    images_secundaria: [
+                      "./assets/img/eventos/setiembre/diploma_rubik.jpg",
+                      "./assets/img/eventos/setiembre/diploma_rubik.jpg",
+                      "./assets/img/eventos/setiembre/diploma_rubik.jpg",
+                    ],
+                  },
+                },
+                {
+                  titulo: "Evento Central de FVC.",
+                  dia: "Sábado",
+                  fecha: "11",
+                  imagen: "./assets/img/eventos/setiembre/evento_fvc.png",
+                  texto:
+                    "Agradecemos a todas las familias de los seis valores quienes participaron en este evento central, continuemos con ese mismo ánimo para lo que se viene este 2022.\n Felicitamos a los tres valores que fueron ganadores de este grandioso evento 2021.",
+                  content: {
+                    imagen: false,
+                    video: true,
+                    videoUrl:
+                      "./assets/img/eventos/setiembre/ganadore_fvc_2021.mp4",
+                  },
+                },
+                {
+                  titulo: "Taller Virtual - Hombres de Valor II",
+                  dia: "Viernes",
+                  fecha: "24",
+                  imagen: "./assets/img/eventos/setiembre/taller_varones.png",
+                  texto:
+                    "Felicitamos a todos los padres quienes participaron en el taller virtual, Hombres de Valor II, los esperamos con más temas de interés el siguiente año 2022.",
+                },
+                {
+                  titulo: "Concurso Bíblico",
+                  dia: "Jueves",
+                  fecha: "30",
+                  imagen: "./assets/img/eventos/setiembre/concurso_biblico.png",
+                  texto:
+                    "Reconocemos el esfuerzo de todos los estudiantes y sus familias quienes participaron como cada año consecutivo en el Concurso Bíblico, Héroes de la Fe y Gamaliel.\n Reconocemos el esfuerzo de todos los estudiantes y sus familias quienes participaron como cada año consecutivo en el Concurso Bíblico, Héroes de la Fe y Gamaliel.",
+                },
+              ],
+            },
+            {
+              id: 9,
+              mes: "Octubre",
+              data: [
+                {
+                  titulo: "I Torneo Virtual de Ajedrez",
+                  dia: "Sábado",
+                  fecha: "02",
+                  imagen: "./assets/img/eventos/octubre/torneo_ajedrez.png",
+                  texto:
+                    "Con mucho entusiasmo nuestros estudiantes de primaria y secundaria participaron en el I Torneo Virtual de Ajedrez. Ellos se desafiados para competir el próximo año 2022.\n Felicitamos a los alumnos ganadores de este estupendo torneo 2021.",
+                  content: {
+                    imagen: true,
+                    video: false,
+                    images_primaria: [
+                      "./assets/img/eventos/octubre/diploma_torneo_ajedrez.jpg",
+                      "./assets/img/eventos/octubre/diploma_torneo_ajedrez.jpg",
+                      "./assets/img/eventos/octubre/diploma_torneo_ajedrez.jpg",
+                    ],
+                    images_secundaria: [
+                      "./assets/img/eventos/octubre/diploma_torneo_ajedrez.jpg",
+                      "./assets/img/eventos/octubre/diploma_torneo_ajedrez.jpg",
+                      "./assets/img/eventos/octubre/diploma_torneo_ajedrez.jpg",
+                    ],
+                  },
+                },
+              ],
+            },
+            {
+              id: 10,
+              mes: "Noviembre",
+              data: [],
+            },
+            {
+              id: 11,
+              mes: "Diciembre",
+              data: [],
+            },
+          ],
+        },
+        created() {
+          this.currentMesEvent = this.events.find(
+            (el) => el.id == this.mesActual
+          );
+        },
+        methods: {
+          anterior() {
+            this.mesCurrent = this.mesActual - 1;
+            const current = this.obtenerDataByMes(this.mesCurrent);
+            if (current) {
+              this.mesActual = this.mesCurrent;
+              this.currentMesEvent = current;
+            }
+          },
+          siguiente() {
+            this.mesCurrent = this.mesActual + 1;
+            const current = this.obtenerDataByMes(this.mesCurrent);
+            if (current) {
+              this.mesActual = this.mesCurrent;
+              this.currentMesEvent = current;
+            }
+          },
+          obtenerDataByMes(mesNumber) {
+            const found = this.events.find((el) => el.id == mesNumber);
+            return found;
+          },
+          selectEvent(event) {
+            this.showDetailEvent = true;
+            this.currentEvent = event;
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
