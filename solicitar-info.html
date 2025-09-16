@@ -229,27 +229,82 @@
     };
     //  control FORM
 
-    document.getElementById("informes").onsubmit = async (e) => {
+    // Nuevo envío del formulario a /api/formularios en JSON
+    document.getElementById("informes").addEventListener("submit", async (e) => {
       e.preventDefault();
+      const formEl = e.currentTarget;
+      const btnSubmit = formEl.querySelector('input[type="submit"]');
+      const messageBox = document.querySelector('.message');
 
-      var form = new FormData(e.currentTarget);
+      // Construir payload
+      const formData = new FormData(formEl);
+      const payload = {
+        nombre_completo: (formData.get('nombres') || '').trim(),
+        telefono: (formData.get('telefono') || '').trim(),
+        correo_electronico: (formData.get('email') || '').trim(),
+        grado_de_interes: formData.get('grado') || '',
+        comentario: (formData.get('comentario') || '').trim()
+      };
 
-      let data = await fetch("./correo.php", {
-        method: "POST",
+      // Validaciones mínimas en front
+      const errores = [];
+      if (!payload.nombre_completo) errores.push('Ingrese su nombre completo');
+      if (!payload.telefono) errores.push('Ingrese su teléfono');
+      if (!payload.correo_electronico) errores.push('Ingrese su correo');
+      else if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(payload.correo_electronico)) errores.push('Correo inválido');
+      if (!payload.grado_de_interes) errores.push('Seleccione un grado de interés');
 
-        body: form,
-      }).then((res) => res.json());
+      if (errores.length) {
+        messageBox.innerHTML = '<ul style="margin:0;padding-left:18px;">' + errores.map(e => '<li>'+e+'</li>').join('') + '</ul>';
+        messageBox.style.display = 'block';
+        messageBox.style.background = '#c0392b';
+        messageBox.style.color = '#fff';
+        return;
+      }
 
-      document.querySelector(".message").innerHTML = data.res;
+      // Estado de cargando
+      btnSubmit.disabled = true;
+      const originalValue = btnSubmit.value;
+      btnSubmit.value = 'ENVIANDO...';
+      messageBox.style.display = 'none';
+      messageBox.classList.remove('success','error');
 
-      document.querySelector(".message").style.display = "block";
+      try {
+        const resp = await fetch('https://api-form-colegio.vercel.app/api/formularios', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+            body: JSON.stringify(payload)
+        });
 
-      setTimeout(() => {
-        document.querySelector(".message").style.display = "none";
-      }, [3000]);
-
-      document.getElementById("informes").reset();
-    };
+        if (resp.ok) {
+          const json = await resp.json().catch(()=>({}));
+          messageBox.innerHTML = (json.mensaje || 'Solicitud enviada correctamente.');
+          messageBox.style.display = 'block';
+          messageBox.style.background = '#2ecc71';
+          messageBox.style.color = '#fff';
+          formEl.reset();
+        } else {
+          let errorText = 'Error al enviar el formulario.';
+          try { const errJson = await resp.json(); if (errJson.mensaje) errorText = errJson.mensaje; } catch(_) {}
+          messageBox.innerHTML = errorText;
+          messageBox.style.display = 'block';
+          messageBox.style.background = '#c0392b';
+          messageBox.style.color = '#fff';
+        }
+      } catch (err) {
+        messageBox.innerHTML = 'No se pudo conectar con el servidor.';
+        messageBox.style.display = 'block';
+        messageBox.style.background = '#c0392b';
+        messageBox.style.color = '#fff';
+      } finally {
+        btnSubmit.disabled = false;
+        btnSubmit.value = originalValue;
+        // Ocultar mensaje luego de 4s
+        setTimeout(() => { messageBox.style.display = 'none'; }, 4000);
+      }
+    });
   </script>
 </body>
 
