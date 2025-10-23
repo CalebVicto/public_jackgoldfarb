@@ -437,26 +437,115 @@
         }
       };
 
-      document.getElementById("form_cv").onsubmit = async (e) => {
+      document.getElementById("form_cv").addEventListener("submit", async (e) => {
         e.preventDefault();
+        const formEl = e.currentTarget;
+        const btn = formEl.querySelector('button[type="submit"]');
+        const messageBox = document.querySelector('.message');
 
-        var form = new FormData(e.currentTarget);
+        // Construir payload JSON con los campos solicitados
+        const fd = new FormData(formEl);
+        const fileInput = formEl.querySelector('input[type="file"]');
+        const file = fileInput && fileInput.files && fileInput.files[0] ? fileInput.files[0] : null;
+        const payload = {
+          apellido_paterno: (fd.get('middlename') || '').trim(),
+          apellido_materno: (fd.get('lastname') || '').trim(),
+          nombre: (fd.get('name') || '').trim(),
+          dni: (fd.get('dni') || '').trim(),
+          edad: (fd.get('age') || '').trim(),
+          celular: (fd.get('cellphone') || '').trim(),
+          email: (fd.get('email') || '').trim(),
+          direccion_completa: (fd.get('address') || '').trim(),
+          grado: fd.get('grado') || '',
+          profesion: (fd.get('profesion') || '').trim(),
+          puesto_al_que_postula: fd.get('puesto') || '',
+          puesto: fd.get('puesto') || '',
+          otro_puesto: (fd.get('other') || '').trim(),
+          archivo: file ? file.name : ''
+        };
 
-        let data = await fetch("./postular.php", {
-          method: "POST",
-          body: form,
-        }).then((res) => res.json());
+        // Validaciones: todos los campos excepto 'otro_puesto' son obligatorios
+        const errores = [];
+        // Campos requeridos
+        if (!payload.apellido_paterno) errores.push('Apellido paterno es obligatorio');
+        if (!payload.apellido_materno) errores.push('Apellido materno es obligatorio');
+        if (!payload.nombre) errores.push('Nombre es obligatorio');
+        if (!payload.dni) errores.push('DNI es obligatorio');
+        if (!payload.edad) errores.push('Edad es obligatoria');
+        if (!payload.celular) errores.push('Celular es obligatorio');
+        if (!payload.email) errores.push('Email es obligatorio');
+        else if(!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(payload.email)) errores.push('Formato de email inválido');
+        if (!payload.direccion_completa) errores.push('Dirección completa es obligatoria');
+        if (!payload.grado) errores.push('Grado es obligatorio');
+        if (!payload.profesion) errores.push('Profesión es obligatoria');
+        if (!payload.puesto_al_que_postula) errores.push('Puesto al que postula es obligatorio');
+        // archivo obligatorio
+        if (!file) errores.push('Adjuntar CV es obligatorio');
 
-        document.querySelector(".message").innerHTML = data.res;
+        if (errores.length) {
+          messageBox.innerHTML = '<ul style="margin:0;padding-left:18px;">' + errores.map(e => '<li>'+e+'</li>').join('') + '</ul>';
+          messageBox.style.display = 'block';
+          messageBox.style.background = '#c0392b';
+          messageBox.style.color = '#fff';
+          return;
+        }
 
-        document.querySelector(".message").style.display = "block";
+        // Enviar FormData (multipart/form-data) a la API pública en lugar de JSON
+        btn.disabled = true;
+        const originalText = btn.innerText;
+        btn.innerText = 'ENVIANDO...';
+        messageBox.style.display = 'none';
 
-        setTimeout(() => {
-          document.querySelector(".message").style.display = "none";
-        }, [3000]);
+        try {
+          // construir FormData con los mismos campos
+          const formDataForApi = new FormData();
+          formDataForApi.append('apellido_paterno', payload.apellido_paterno);
+          formDataForApi.append('apellido_materno', payload.apellido_materno);
+          formDataForApi.append('nombre', payload.nombre);
+          formDataForApi.append('dni', payload.dni);
+          formDataForApi.append('edad', payload.edad);
+          formDataForApi.append('celular', payload.celular);
+          formDataForApi.append('email', payload.email);
+          formDataForApi.append('direccion_completa', payload.direccion_completa);
+          formDataForApi.append('grado', payload.grado);
+          formDataForApi.append('profesion', payload.profesion);
+          formDataForApi.append('puesto_al_que_postula', payload.puesto_al_que_postula);
+          formDataForApi.append('puesto', payload.puesto);
+          formDataForApi.append('otro_puesto', payload.otro_puesto);
+          if (file) formDataForApi.append('archivo', file, file.name);
 
-        document.getElementById("informes").reset();
-      };
+          const resp = await fetch('https://api-form-colegio.vercel.app/api/formularios/unete-a-nuestro-equipo', {
+            method: 'POST',
+            body: formDataForApi
+          });
+
+          if (resp.ok) {
+            const json = await resp.json().catch(()=>({}));
+            messageBox.innerHTML = (json.mensaje || 'Solicitud enviada correctamente.');
+            messageBox.style.background = '#2ecc71';
+            messageBox.style.color = '#fff';
+            messageBox.style.display = 'block';
+        formEl.reset();
+          } else {
+            let errorText = 'Error al enviar la solicitud.';
+            try { const errJson = await resp.json(); if (errJson.mensaje) errorText = errJson.mensaje; } catch(_) {}
+            messageBox.innerHTML = errorText;
+            messageBox.style.background = '#c0392b';
+            messageBox.style.color = '#fff';
+            messageBox.style.display = 'block';
+          }
+        } catch (err) {
+          messageBox.innerHTML = 'No se pudo conectar con el servidor.';
+          messageBox.style.background = '#c0392b';
+          messageBox.style.color = '#fff';
+          messageBox.style.display = 'block';
+        }
+
+        // Finalizar: reactivar botón, resetear formulario y ocultar mensaje después de mostrarse
+        btn.disabled = false;
+        btn.innerText = originalText;
+        setTimeout(()=>{ messageBox.style.display = 'none'; }, 4000);
+      });
     </script>
   </body>
 </html>
